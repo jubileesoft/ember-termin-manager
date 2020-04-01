@@ -24,6 +24,17 @@ module.exports = function(environment) {
 
     appoAdmin: {
       backendUri: 'https://localhost:3000'
+    },
+
+    torii: {
+      providers: {
+        'google-oauth2-bearer-v2': {
+          apiKey:
+            '472845354613-qhjjmmug094kpv9b4iu35g65aa34v4u0.apps.googleusercontent.com',
+          redirectUri: 'http://localhost:4200/torii/redirect.html',
+          scope: 'openid email profile'
+        }
+      }
     }
   };
 
