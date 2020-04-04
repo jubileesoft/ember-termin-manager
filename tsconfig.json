@@ -30,6 +30,9 @@
       "ember-appo-admin/*": [
         "app/*"
       ],
+      "ember-simple-auth/mixins/*": [
+        "node_modules/ember-simple-auth/addon/mixins/*"
+      ],
       "*": [
         "types/*"
       ]
