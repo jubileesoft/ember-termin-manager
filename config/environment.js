@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ember-appo-admin',
     environment,
@@ -13,8 +13,8 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+        Date: false,
+      },
     },
 
     APP: {
@@ -22,9 +22,16 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    appoAdmin: {
-      backendUri: 'https://localhost:3000'
+    apollo: {
+      apiURL: 'https://localhost:3000/graphql',
+      // Optionally, set the credentials property of the Fetch Request interface
+      // to control when a cookie is sent:
+      // requestCredentials: 'same-origin', // other choices: 'include', 'omit'
     },
+
+    // appoAdmin: {
+    //   backendUri: 'https://localhost:3000',
+    // },
 
     torii: {
       routeIfAlreadyAuthenticated: 'protected',
@@ -33,10 +40,10 @@ module.exports = function(environment) {
           apiKey:
             '472845354613-qhjjmmug094kpv9b4iu35g65aa34v4u0.apps.googleusercontent.com',
           redirectUri: 'http://localhost:4200/torii/redirect.html',
-          scope: 'openid email profile'
-        }
-      }
-    }
+          scope: 'openid email profile',
+        },
+      },
+    },
   };
 
   if (environment === 'development') {

@@ -1,0 +1,5 @@
+query getAllTenants {
+  human(id: $id) {
+    name
+  }
+}
