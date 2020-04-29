@@ -1,5 +1,7 @@
 query getAllTenants {
-  human(id: $id) {
+  getAllTenants {
+    _id
+    dbName
     name
   }
 }
