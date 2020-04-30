@@ -8,6 +8,9 @@ module.exports = function (defaults) {
     emberApolloClient: {
       keepGraphqlFileExtension: true,
     },
+    emberJubileesoftUi: {
+      primary: '#ddc686',
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
