@@ -1,0 +1,8 @@
+mutation CreateTenant($input: CreateTenantInput) {
+  createTenant(input: $input) {
+    _id
+    name
+    adminEmail
+    dbName
+  }
+}

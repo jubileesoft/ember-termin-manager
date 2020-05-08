@@ -65,3 +65,13 @@ body {
   line-height: 32px;
   letter-spacing: 0.15;
 }
+
+:global .vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+:global .horizontal {
+  display: flex;
+  flex-direction: row;
+}

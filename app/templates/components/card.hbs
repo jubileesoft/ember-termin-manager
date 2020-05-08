@@ -1,3 +1,10 @@
 <div local-class="root">
-  {{yield}}
+  {{#if this.args.title}}
+    <div local-class="title">
+      {{this.args.title}}
+    </div>
+  {{/if}}
+  <div>
+    {{yield}}
+  </div>
 </div>

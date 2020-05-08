@@ -1,7 +1,35 @@
 <div local-class="root">
   <div class="media">
-    <Card>
-      <JubileeInput @theme="dark" @placeholder="Name"/>
+    <Card @title="Mandanten anlegen">
+      <div class="vertical">
+        <JubileeInput
+          @theme="dark"
+          @placeholder="Name"
+          @text={{this.name}}
+          @onChange={{fn (mut this.name)}}
+          @update="on-input"
+        />
+        <JubileeInput
+          @theme="dark"
+          @placeholder="Admin E-Mail"
+          @text={{this.adminEmail}}
+          @onChange={{fn (mut this.adminEmail)}}
+          @update="on-input"
+        />
+        <JubileeInput
+          @theme="dark"
+          @placeholder="Datenbank"
+          @text={{this.dbName}}
+          @onChange={{fn (mut this.dbName)}}
+          @update="on-input"
+        />
+        <JubileeButton
+          local-class="save"
+          @text="Speichern"
+          @isEnabled={{this.canSave}}
+          @onClick={{this.save}}
+        />
+      </div>
     </Card>
   </div>
 </div>
