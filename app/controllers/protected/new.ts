@@ -1,8 +1,8 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
-import { CreateTenantInput } from 'ember-appo-admin/gql/types';
-import createTenantMutation from 'ember-appo-admin/gql/mutations/create-tenant.graphql';
+import { CreateTenantInput } from 'ember-termin-manager/gql/types';
+import createTenantMutation from 'ember-termin-manager/gql/mutations/create-tenant.graphql';
 
 export default class ProtectedNew extends Controller.extend({
   // anything which *must* be merged to prototype here

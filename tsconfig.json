@@ -24,10 +24,10 @@
       "fetch": [
         "node_modules/ember-fetch"
       ],
-      "ember-appo-admin/tests/*": [
+      "ember-termin-manager/tests/*": [
         "tests/*"
       ],
-      "ember-appo-admin/*": [
+      "ember-termin-manager/*": [
         "app/*"
       ],
       "ember-simple-auth/mixins/*": [

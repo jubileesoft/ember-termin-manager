@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import { queryManager } from 'ember-apollo-client';
-import getAllTenantsQuery from 'ember-appo-admin/gql/queries/get-all-tenants.graphql';
+import getAllTenantsQuery from 'ember-termin-manager/gql/queries/get-all-tenants.graphql';
 
 export default class ProtectedIndex extends Route.extend({
   // anything which *must* be merged to prototype here

@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
-import { CreateTenantInput } from 'ember-appo-admin/gql/types';
+import { CreateTenantInput } from 'ember-termin-manager/gql/types';
 
 interface NewViewArgs {
   createTenant(input: CreateTenantInput): Promise<void>;

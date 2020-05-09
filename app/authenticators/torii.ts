@@ -1,5 +1,5 @@
 import Torii from 'ember-simple-auth/authenticators/torii';
-import ENV from 'ember-appo-admin/config/environment';
+import ENV from 'ember-termin-manager/config/environment';
 import { inject as service } from '@ember/service';
 import fetch, { Headers, Request, Response, AbortController } from 'fetch';
 

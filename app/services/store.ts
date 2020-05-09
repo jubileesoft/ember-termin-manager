@@ -1,5 +1,5 @@
 import Service from '@ember/service';
-import ENV from 'ember-appo-admin/config/environment';
+import ENV from 'ember-termin-manager/config/environment';
 
 export default class Store extends Service.extend({
   // anything which *must* be merged to prototype here
