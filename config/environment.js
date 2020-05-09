@@ -39,7 +39,8 @@ module.exports = function (environment) {
         'google-oauth2-bearer-v2': {
           apiKey:
             '472845354613-qhjjmmug094kpv9b4iu35g65aa34v4u0.apps.googleusercontent.com',
-          redirectUri: 'http://localhost:4200/torii/redirect.html',
+          redirectUri:
+            'https://termin.manager.jubileesoft.com/torii/redirect.html',
           scope: 'openid email profile',
         },
       },
@@ -52,6 +53,8 @@ module.exports = function (environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.torii.providers['google-oauth2-bearer-v2'].redirectUri =
+      'http://localhost:4200/torii/redirect.html';
   }
 
   if (environment === 'test') {
