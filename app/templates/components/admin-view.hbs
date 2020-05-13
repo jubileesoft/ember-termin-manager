@@ -2,8 +2,9 @@
   <div class="media">
     <Card @title="Admin Bereich">
       <JubileeButton
-        @text="Admin Datenbank anlegen"
-        @onClick={{@createAdminDb}}
+        @text={{this.createAdminDbButtonText}}
+        @onClick={{this.createAdminDb}}
+        @isEnabled={{not @isCreatingAdminDb}}
       />
     </Card>
   </div>
