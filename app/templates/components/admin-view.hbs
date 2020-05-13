@@ -1,6 +1,21 @@
 <div local-class="root">
   <div class="media">
     <Card @title="Admin Bereich">
+      {{#if @adminDatabaseInfo}}
+        {{@adminDatabaseInfo.version}}
+        {{format-date
+          @adminDatabaseInfo.createdAt
+          year="numeric"
+          month="numeric"
+          day="numeric"
+          hour="numeric"
+          second="numeric"
+          minute="numeric"
+          hour12=false
+        }}
+        
+      {{/if}}
+
       <JubileeButton
         @text={{this.createAdminDbButtonText}}
         @onClick={{this.createAdminDb}}
