@@ -1,3 +1,6 @@
 mutation CreateAdminDatabase {
-  createAdminDatabase
+  createAdminDatabase {
+    version
+    createdAt
+  }
 }

@@ -9,6 +9,8 @@ export default class ProtectedIndex extends Route.extend({
   @queryManager apollo: any;
 
   model() {
+    return null;
+    
     return this.apollo.watchQuery({ query: getAllTenantsQuery });
   }
 }

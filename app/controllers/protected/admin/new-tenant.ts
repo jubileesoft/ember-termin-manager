@@ -1,13 +1,11 @@
-import Component from '@glimmer/component';
+import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { CreateTenantInput } from 'ember-termin-manager/gql/types';
 
-interface NewViewArgs {
-  createTenant(input: CreateTenantInput): Promise<void>;
-}
-
-export default class NewView extends Component<NewViewArgs> {
+export default class ProtectedAdminNewTenant extends Controller.extend({
+  // anything which *must* be merged to prototype here
+}) {
   @tracked name: string = '';
   @tracked adminEmail: string = '';
   @tracked dbName: string = '';
@@ -36,5 +34,12 @@ export default class NewView extends Component<NewViewArgs> {
     } catch (error) {
       // error handling
     }
+  }
+}
+
+// DO NOT DELETE: this is how TypeScript knows how to look up your controllers.
+declare module '@ember/controller' {
+  interface Registry {
+    'protected/admin/new-tenant': ProtectedAdminNewTenant;
   }
 }

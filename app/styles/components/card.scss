@@ -1,5 +1,6 @@
 .root {
-  margin-top: 12px;
+  margin-top: 8px;
+  margin-bottom: 4px;
   background: var(--card-color);
   padding: 12px;
 
@@ -10,4 +11,5 @@
 .root .title {
   font-size: 20px;
   color: #ffffff;
+  margin-bottom: 6px;
 }

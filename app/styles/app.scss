@@ -7,6 +7,7 @@ html,
 body {
   --primary-color: #ddc686;
   --accent-color: #797979;
+  --accent-light-color: #d7d7d7;
   --background-color: #2c2c2c;
   --card-color: #393939;
   --text-color: #ffffff;
@@ -74,4 +75,8 @@ body {
 :global .horizontal {
   display: flex;
   flex-direction: row;
+}
+
+:global .accent-light-color {
+  color: var(--accent-light-color);
 }

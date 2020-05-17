@@ -1,0 +1,47 @@
+<div local-class="root">
+  <div class="media" local-class="content">
+    <Card @title="Admin Datenbank">
+      {{#if this.model}}
+        <div style="display: grid; grid-template-columns: auto auto; align-self: flex-start; column-gap: 8px;">
+          <div class="accent-light-color">
+            Version:
+          </div>
+          <div>
+            {{this.model.version}}
+          </div>
+          <div class="accent-light-color">
+            Angelegt:
+          </div>
+          <div>
+            {{
+              format-date
+              this.model.createdAt
+              year="numeric"
+              month="numeric"
+              day="numeric"
+              hour="numeric"
+              second="numeric"
+              minute="numeric"
+              hour12=false
+            }}
+          </div>
+        </div>
+      {{else}}
+        <JubileeButton
+          @text={{this.createAdminDbButtonText}}
+          @onClick={{this.createAdminDb}}
+          @isEnabled={{not @isCreatingAdminDb}}
+        />
+      {{/if}}
+    </Card>
+
+    <Card @title="Mandanten">
+
+    </Card>
+
+    <JubileeButton
+      @text="Mandant anlegen"
+      @onClick={{this.newTenant}}
+    />
+  </div>
+</div>
