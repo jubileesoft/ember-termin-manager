@@ -4,9 +4,16 @@
       <div class="vertical">
         <JubileeInput
           @theme="dark"
-          @placeholder="Name"
+          @placeholder="Name (lang)"
           @text={{this.name}}
           @onChange={{fn (mut this.name)}}
+          @update="on-input"
+        />
+        <JubileeInput
+          @theme="dark"
+          @placeholder="Name (kurz)"
+          @text={{this.short}}
+          @onChange={{fn (mut this.short)}}
           @update="on-input"
         />
         <JubileeInput
@@ -14,13 +21,6 @@
           @placeholder="Admin E-Mail"
           @text={{this.adminEmail}}
           @onChange={{fn (mut this.adminEmail)}}
-          @update="on-input"
-        />
-        <JubileeInput
-          @theme="dark"
-          @placeholder="Datenbank"
-          @text={{this.dbName}}
-          @onChange={{fn (mut this.dbName)}}
           @update="on-input"
         />
         <JubileeButton

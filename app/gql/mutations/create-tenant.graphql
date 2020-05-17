@@ -1,8 +1,18 @@
 mutation CreateTenant($input: CreateTenantInput) {
   createTenant(input: $input) {
-    _id
+    id
     name
-    adminEmail
-    dbName
+    short
+    config {
+      id
+      admin {
+        id
+        email
+      }
+      agents {
+        id
+        email
+      }
+    }
   }
 }
